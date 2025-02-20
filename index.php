@@ -1,3 +1,7 @@
+<?php 
+$nombre = "Manuel Henriquez";
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,6 +10,6 @@
     <title>Curso de PHP 8 - Bases</title>
 </head>
 <body>
-    <h1><?php echo "Hola mundo"; ?></h1>
+    <h1><?php echo "Hola mundo, mi nombre es $nombre"; ?></h1>
 </body>
 </html>
