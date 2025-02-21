@@ -1,32 +1,16 @@
 <?php 
-//Nombre de la constante y valor
-define('CURSO', 'PHP 8 desde cero');
-define('USUARIO_1', 'Manuel Henriquez');
+$a = 5;
+$b = 3;
 
-//PHP 8 permite definir constantes arrays
-define('ANIMALES', [
-    'Perro',
-    'Gato',
-    'Castor',
-    'León',
-]);
+echo "Primer párrafo <br>";
 
-//La constante no necesita el prefijo $
-echo CURSO . '. Alumno ' . USUARIO_1;
-echo '<br>';
-echo ANIMALES[0];
-
-echo '<br>';
-//Comprobar si una constante existe
-if (defined('CURSO')) {
-    echo 'Está definido';
+//Si $a es menor que $b se muestra el segundo párrafo
+if ($a < $b) {
+    echo "Segundo párrafo <br>";
 }
+//Si no, se muestra el segundo párrafo editado
 else {
-    echo 'No está definido';
+    echo "Segundo párrafo editado <br>";
 }
 
-echo '<br>';
-//Constantes predefinicas
-echo 'Mi versión de php es: ' . PHP_VERSION;
-echo '<br>';
-echo 'Mi SO de php es: ' . PHP_OS;
+echo "Tercer párrafo <br>";
