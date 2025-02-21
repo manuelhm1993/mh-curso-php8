@@ -1,16 +1,13 @@
 <?php 
 $a = 5;
-$b = 3;
+$b = 5;
 
-echo "Primer párrafo <br>";
-
-//Si $a es menor que $b se muestra el segundo párrafo
-if ($a < $b) {
-    echo "Segundo párrafo <br>";
+if ($a > $b) {
+    echo "El valor de a es mayor que el valor de b";
 }
-//Si no, se muestra el segundo párrafo editado
+elseif ($a < $b) {
+    echo "El valor de a es menor que el valor de b";
+} 
 else {
-    echo "Segundo párrafo editado <br>";
+    echo "El valor de a es igual que el valor de b";
 }
-
-echo "Tercer párrafo <br>";
