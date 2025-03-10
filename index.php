@@ -1,12 +1,12 @@
 <?php 
 
-$base = 2;
-$exponente = 3;
-$resultado = 1;
+$filas = 10;
 
-for($i = 0; $i < $exponente; $i++)
+for($i = 0; $i < $filas; $i++)
 {
-    $resultado *= $base;
+    for($j = 0; $j <= $i; $j++)
+    {
+        echo '*';
+    }
+    echo '<br>';
 }
-
-echo "{$base} ^ {$exponente} = {$resultado}";
