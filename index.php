@@ -1,8 +1,15 @@
 <?php 
 
-$nombres = ['Manuel', 'Luna', 'Fernando', 'Ruth'];
-
-foreach($nombres as $index => $nombre)
+function factorial($n)
 {
-    echo "- {$index}: {$nombre} <br>";
+    if($n == 0) {
+        return 1;
+    }
+    else {
+        return $n * factorial($n - 1);
+    }
 }
+
+$n = 9;
+
+echo "!{$n} = " . factorial($n);
