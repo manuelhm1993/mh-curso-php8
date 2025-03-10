@@ -1,14 +1,12 @@
 <?php 
 
-$base = 5;
-$exponente = 4;
+$base = 2;
+$exponente = 3;
 $resultado = 1;
-$i = 0;
 
-while($i < $exponente)
+for($i = 0; $i < $exponente; $i++)
 {
     $resultado *= $base;
-    $i++;
 }
 
 echo "{$base} ^ {$exponente} = {$resultado}";
