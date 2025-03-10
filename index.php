@@ -1,12 +1,8 @@
 <?php 
 
-$filas = 10;
+$nombres = ['Manuel', 'Luna', 'Fernando', 'Ruth'];
 
-for($i = 0; $i < $filas; $i++)
+foreach($nombres as $index => $nombre)
 {
-    for($j = 0; $j <= $i; $j++)
-    {
-        echo '*';
-    }
-    echo '<br>';
+    echo "- {$index}: {$nombre} <br>";
 }
