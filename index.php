@@ -10,27 +10,20 @@
     <form action="./utilities/procesar.php" method="post" enctype="multipart/form-data">
         <div>
             <label for="name">Nombre:</label>
-            <input type="text" name="name" id="name" require>
+            <input type="text" name="name" id="name" required>
         </div>
 
         <div>
             <label for="name">Edad:</label>
-            <input type="number" name="edad" id="edad" min="4" max="120" require>
+            <input type="number" name="edad" id="edad" min="4" max="120" required>
         </div>
 
         <div>
             Sexo
-            <div>
-                <label>
-                    <input type="radio" name="sexo" value="masculino">
-                    Masculino:
-                </label>
-
-                <label>
-                    <input type="radio" name="sexo" value="femenino">
-                    Femenino:
-                </label>
-            </div>
+            <select name="sexo" required>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+            </select>
         </div>
 
         <div>
@@ -58,6 +51,11 @@
                 Imagen: <br>
                 <input type="file" name="imagen">
             </label>
+        </div>
+
+        <div>
+            <label for="mensaje">Mensaje:</label>
+            <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
         </div>
 
         <br>

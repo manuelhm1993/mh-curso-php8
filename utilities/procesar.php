@@ -4,11 +4,12 @@ $data = [];
 
 //La variable super global $_REQUEST almacena la información sin importar el método
 if((isset($_REQUEST['name']) && isset($_REQUEST['edad']) && isset($_REQUEST['sexo']) )
-    || (isset($_REQUEST['roles']) || isset($_REQUEST['roles']))) {
-    $data['nombre'] = $_REQUEST['name'];
-    $data['edad']   = $_REQUEST['edad'];
-    $data['sexo']   = $_REQUEST['sexo'];
-    $data['roles']  = $_REQUEST['roles'];
+    || (isset($_REQUEST['roles']) || isset($_REQUEST['roles']) || isset($_REQUEST['mensaje']))) {
+    $data['nombre']  = $_REQUEST['name'];
+    $data['edad']    = $_REQUEST['edad'];
+    $data['sexo']    = $_REQUEST['sexo'];
+    $data['roles']   = $_REQUEST['roles'];
+    $data['mensaje'] = $_REQUEST['mensaje'];
     //Guardar imagenes
     $data['imagen'] = $_FILES['imagen'];
 }
