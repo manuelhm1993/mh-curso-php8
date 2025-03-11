@@ -9,7 +9,47 @@
     <form action="./utilities/procesar.php" method="post">
         <div>
             <label for="name">Nombre:</label>
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="name" require>
+        </div>
+
+        <div>
+            <label for="name">Edad:</label>
+            <input type="number" name="edad" id="edad" min="4" max="120" require>
+        </div>
+
+        <div>
+            Sexo
+            <div>
+                <label>
+                    <input type="radio" name="sexo" value="masculino">
+                    Masculino:
+                </label>
+
+                <label>
+                    <input type="radio" name="sexo" value="femenino">
+                    Femenino:
+                </label>
+            </div>
+        </div>
+
+        <div>
+            Roles
+            <div>
+                <label>
+                    <input type="checkbox" name="roles[]" value="administrador">
+                    Administrador:
+                </label>
+
+                <label>
+                    <input type="checkbox" name="roles[]" value="moderador">
+                    Moderador:
+                </label>
+
+                <label>
+                    <input type="checkbox" name="roles[]" value="editor">
+                    Editor:
+                </label>
+            </div>
         </div>
 
         <button type="submit">Enviar</button>
