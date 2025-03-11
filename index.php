@@ -22,5 +22,13 @@ $usuarios = [
         'telefono' => '04246213686',
     ],
 ];
-    
-echo $usuarios[0]['direccion']['ciudad'];
+
+//Recorrido de un array
+foreach($usuarios as $i => $usuario)
+{
+    echo "Usuario #" . ($i + 1) . "<br>";
+    echo "- {$usuario['nombre']} <br>";
+    echo "- {$usuario['email']} <br>";
+    echo "- {$usuario['telefono']} <br>";
+    echo "<hr>";
+}
