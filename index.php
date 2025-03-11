@@ -4,7 +4,7 @@ require_once './Clases/Persona.php';
 
 $persona = new Persona;
 
-$persona->set_nombre('Manuel Alejandro');
+$persona->set_nombre('MaNueL AleJandro');
 $persona->set_apellido('Henriquez Moreno');
 $persona->set_edad(31);
 
