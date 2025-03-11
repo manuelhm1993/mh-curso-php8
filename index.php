@@ -1,7 +1,10 @@
 <?php 
 
-$array = [10, "Manuel", 20, false]; //Permite guardar distinto tipo de datos
-
-$array[] = 12; //Agregar dinámicamente un elemento al array
-
-echo $array[4];
+//Array asociativo, clave => valor
+$usuario = [
+    'nombre'   => 'Manuel Henriquez',
+    'email'    => 'manuelhm1993@gmail.com',
+    'telefono' => '04246827377',
+];
+    
+echo $usuario['nombre'];
