@@ -1,15 +1,7 @@
 <?php 
 
-function concatenar(...$palabras)
-{
-    $frase = "";
+$array = [10, "Manuel", 20, false]; //Permite guardar distinto tipo de datos
 
-    foreach($palabras as $palabra)
-    {
-        $frase .= "{$palabra} ";
-    }
+$array[] = 12; //Agregar dinámicamente un elemento al array
 
-    return $frase;
-}
-
-echo concatenar('Estoy', 'aprendiendo', 'php');
+echo $array[4];
