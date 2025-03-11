@@ -1,8 +1,15 @@
 <?php 
 
-$nombres = ['Manuel', 'Luna', 'Fernando', 'Ruth'];
-
-foreach($nombres as $index => $nombre)
+function concatenar(...$palabras)
 {
-    echo "- {$index}: {$nombre} <br>";
+    $frase = "";
+
+    foreach($palabras as $palabra)
+    {
+        $frase .= "{$palabra} ";
+    }
+
+    return $frase;
 }
+
+echo concatenar('Estoy', 'aprendiendo', 'php');
