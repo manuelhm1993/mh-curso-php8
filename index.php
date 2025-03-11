@@ -1,15 +1,15 @@
 <?php 
 
-function factorial($n)
+function concatenar(...$palabras)
 {
-    if($n == 0) {
-        return 1;
+    $frase = "";
+
+    foreach($palabras as $palabra)
+    {
+        $frase .= "{$palabra} ";
     }
-    else {
-        return $n * factorial($n - 1);
-    }
+
+    return $frase;
 }
 
-$n = 9;
-
-echo "!{$n} = " . factorial($n);
+echo concatenar('Estoy', 'aprendiendo', 'php');
