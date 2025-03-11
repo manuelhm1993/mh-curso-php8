@@ -6,7 +6,8 @@
     <title>Formularios</title>
 </head>
 <body>
-    <form action="./utilities/procesar.php" method="post">
+    <!-- Preparar el formulario para enviar archivos -->
+    <form action="./utilities/procesar.php" method="post" enctype="multipart/form-data">
         <div>
             <label for="name">Nombre:</label>
             <input type="text" name="name" id="name" require>
@@ -52,6 +53,14 @@
             </div>
         </div>
 
+        <div>
+            <label>
+                Imagen: <br>
+                <input type="file" name="imagen">
+            </label>
+        </div>
+
+        <br>
         <button type="submit">Enviar</button>
     </form>
 </body>
