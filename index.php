@@ -1,65 +1,19 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formularios</title>
-</head>
-<body>
-    <!-- Preparar el formulario para enviar archivos -->
-    <form action="./utilities/procesar.php" method="post" enctype="multipart/form-data">
-        <div>
-            <label for="name">Nombre:</label>
-            <input type="text" name="name" id="name" required>
-        </div>
+<?php
 
-        <div>
-            <label for="name">Edad:</label>
-            <input type="number" name="edad" id="edad" min="4" max="120" required>
-        </div>
+require_once './Clases/Persona.php';
 
-        <div>
-            Sexo
-            <select name="sexo" required>
-                <option value="masculino">Masculino</option>
-                <option value="femenino">Femenino</option>
-            </select>
-        </div>
+$persona = new Persona;
 
-        <div>
-            Roles
-            <div>
-                <label>
-                    <input type="checkbox" name="roles[]" value="administrador">
-                    Administrador:
-                </label>
+$persona->set_nombre('Manuel Alejandro');
+$persona->set_apellido('Henriquez Moreno');
+$persona->set_edad(31);
 
-                <label>
-                    <input type="checkbox" name="roles[]" value="moderador">
-                    Moderador:
-                </label>
+$persona2 = new Persona;
 
-                <label>
-                    <input type="checkbox" name="roles[]" value="editor">
-                    Editor:
-                </label>
-            </div>
-        </div>
+$persona2->set_nombre('Luna Isabel');
+$persona2->set_apellido('Lopez');
+$persona2->set_edad(26);
 
-        <div>
-            <label>
-                Imagen: <br>
-                <input type="file" name="imagen">
-            </label>
-        </div>
-
-        <div>
-            <label for="mensaje">Mensaje:</label>
-            <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
-        </div>
-
-        <br>
-        <button type="submit">Enviar</button>
-    </form>
-</body>
-</html>
+echo "Nombre de la persona 1: " . $persona->get_nombre();
+echo "<br>";
+echo "Nombre de la persona 2: " . $persona2->get_nombre();
