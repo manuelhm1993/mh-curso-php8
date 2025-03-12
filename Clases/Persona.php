@@ -1,23 +1,16 @@
 <?php
 
+require_once './Clases/Common.php';
+
 class Persona 
 {
+    //Propiedades
     private string $nombre;
-    private string $apellido;
+    private string $apellido1;
+    private string $apellido2;
     private int $edad;
 
-    public function __construct(string $nombre, string $apellido, int $edad)
-    {
-        $this->nombre = $this->formatear_texto($nombre);
-        $this->apellido = $this->formatear_texto($apellido);
-        $this->edad = $edad;
-    }
-
-    private function formatear_texto(string $texto): string
-    {
-        return ucwords(strtolower($texto));
-    }
-
+    //Métodos
     public function get_nombre(): string
     {
         return $this->nombre;
@@ -25,7 +18,7 @@ class Persona
 
     public function get_apellido(): string
     {
-        return $this->apellido;
+        return "{$this->apellido1} {$this->apellido2}";
     }
 
     public function get_edad(): int
@@ -35,16 +28,29 @@ class Persona
 
     public function set_nombre(string $nombre): void
     {
-        $this->nombre = $this->formatear_texto($nombre);
+        $this->nombre = Common::formatear_texto($nombre);
     }
 
-    public function set_apellido(string $apellido): void
+    public function set_apellido(string $apellido1, string $apellido2 = ''): void
     {
-        $this->apellido = $this->formatear_texto($apellido);
+        $this->apellido1 = Common::formatear_texto($apellido1);
+        $this->apellido2 = Common::formatear_texto($apellido2);
     }
 
     public function set_edad(int $edad): void
     {
         $this->edad = $edad;
     }
+}
+
+class Venezolano extends Persona //Herencia
+{
+    private string $urbanizacion;
+    private string $ciudad;
+}
+
+class Colombiano extends Persona //Herencia
+{
+    private string $departamento;
+    private string $region;
 }

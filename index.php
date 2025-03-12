@@ -2,9 +2,14 @@
 
 require_once './Clases/Persona.php';
 
-$persona = new Persona('MaNueL AleJandro', 'Henriquez Moreno', 31);
-$persona2 = new Persona('Luna Isabel', 'Lopez', 26);
+//Instancia de clase
+$venezolano = new Venezolano;
 
-echo "Nombre de la persona 1: " . $persona->get_nombre();
-echo "<br>";
-echo "Nombre de la persona 2: " . $persona2->get_nombre();
+//Invocar un método
+$venezolano->set_nombre('Manuel Henriquez');
+
+var_dump($venezolano);
+
+$colombiano = new Colombiano;
+
+var_dump($colombiano);
