@@ -2,14 +2,8 @@
 
 require_once './Clases/Persona.php';
 
-//Instancia de clase
 $venezolano = new Venezolano;
 
-//Invocar un método
-$venezolano->set_nombre('Manuel Henriquez');
+$venezolano->set_apellido('Henriquez', 'Moreno');
 
-var_dump($venezolano);
-
-$colombiano = new Colombiano;
-
-var_dump($colombiano);
+echo $venezolano->get_apellido();
