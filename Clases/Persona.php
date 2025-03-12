@@ -6,6 +6,13 @@ class Persona
     private string $apellido;
     private int $edad;
 
+    public function __construct(string $nombre, string $apellido, int $edad)
+    {
+        $this->nombre = $this->formatear_texto($nombre);
+        $this->apellido = $this->formatear_texto($apellido);
+        $this->edad = $edad;
+    }
+
     private function formatear_texto(string $texto): string
     {
         return ucwords(strtolower($texto));

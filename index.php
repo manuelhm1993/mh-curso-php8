@@ -2,17 +2,8 @@
 
 require_once './Clases/Persona.php';
 
-$persona = new Persona;
-
-$persona->set_nombre('MaNueL AleJandro');
-$persona->set_apellido('Henriquez Moreno');
-$persona->set_edad(31);
-
-$persona2 = new Persona;
-
-$persona2->set_nombre('Luna Isabel');
-$persona2->set_apellido('Lopez');
-$persona2->set_edad(26);
+$persona = new Persona('MaNueL AleJandro', 'Henriquez Moreno', 31);
+$persona2 = new Persona('Luna Isabel', 'Lopez', 26);
 
 echo "Nombre de la persona 1: " . $persona->get_nombre();
 echo "<br>";
