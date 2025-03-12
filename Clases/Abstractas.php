@@ -4,7 +4,7 @@
 abstract class Abstracta 
 {
     protected abstract function getValor(): string;
-    protected abstract function valorPrefijo($valor): void;
+    public abstract function valorPrefijo(string $valor): string;
 
     public function imprimir(): void
     {
@@ -14,13 +14,16 @@ abstract class Abstracta
 
 class NuevaClase extends Abstracta
 {
+    private string $message = 'Luna';
+
     protected function getValor(): string
     {
         return "Hola mundo";
     }
 
-    protected function valorPrefijo($valor): void
+    //Siempre que respete la estructura principal, se puede modificar a gusto
+    public function valorPrefijo(string $valor, string $separador = ' '): string
     {
-        
+        return "{$valor}{$separador}{$this->message}";
     }
 }
