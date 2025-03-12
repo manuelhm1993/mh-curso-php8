@@ -1,17 +1,21 @@
 <?php
 
-use POO\Namespaces\Carpeta1\Humano;
-use POO\Namespaces\Carpeta2\Humano as Humano2; //Alias de namespace
+use AutoLoad\Controllers\CourseController;
+use AutoLoad\Models\Course;
 
-require_once "./POO/Namespaces/Carpeta1/Humano.php";
-require_once "./POO/Namespaces/Carpeta2/Humano.php";
+//Esta función se encarga de importar los archivos correspondientes
+spl_autoload_register(function ($clase) {
+    $clase = str_replace("\\", "/", $clase) . '.php';
 
-$humano1 = new Humano;
+    if(file_exists($clase)) require_once $clase;
+});
 
-$humano1->saludar();
+$course = new Course;
+
+$course->saludar();
 
 echo '<br>';
 
-$humano2 = new Humano2;
+$controller = new CourseController;
 
-$humano2->saludar();
+$controller->saludar();
