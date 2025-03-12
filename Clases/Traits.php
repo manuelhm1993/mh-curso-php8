@@ -3,23 +3,26 @@
 require_once './Clases/Persona.php';
 
 //Conjunto de funciones extra que se implementan en una clase
-trait Hola 
+trait A 
 {
-    public function decirHola(): void
+    public function saludo(): void
     {
-        echo "Hola";
+        echo "Hola mundo desde el trait A";
     }
 }
 
-trait Mundo
+trait B
 {
-    public function decirMundo(): void
+    public function saludo(): void
     {
-        echo " mundo";
+        echo "Hola mundo desde el trait B";
     }
 }
 
 class Venezolano extends Persona //Herencia
 {
-    use Hola, Mundo;
+    //Si dos métodos tienen el mismo nombre se debe especificar cuál usar
+    use A, B {
+        B::saludo insteadOf A;
+    }
 }
