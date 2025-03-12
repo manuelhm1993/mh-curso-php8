@@ -6,4 +6,6 @@ $venezolano = new Venezolano;
 
 $venezolano->set_apellido('Henriquez', 'Moreno');
 
-echo $venezolano->get_apellido();
+echo '<br>';
+
+var_dump($venezolano);

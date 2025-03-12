@@ -47,6 +47,15 @@ class Venezolano extends Persona //Herencia
 {
     private string $urbanizacion;
     private string $ciudad;
+
+    //Sobreescritura de métodos
+    public function set_apellido(string $apellido1, string $apellido2 = ''): void
+    {
+        //Llamar al método de la clase padre
+        parent::set_apellido($apellido1, $apellido2);
+
+        echo 'Apellidos modificados exitosamente';
+    }
 }
 
 class Colombiano extends Persona //Herencia
