@@ -1,3 +1,7 @@
 <?php
 
-require_once './Clases/Interfaces.php';
+require_once './Clases/Abstractas.php';
+
+$obj = new NuevaClase;
+
+$obj->imprimir();
