@@ -1,6 +1,8 @@
 <?php
 
-require_once './Clases/Common.php';
+namespace POO;
+
+require_once './POO/Common.php';
 
 class Persona 
 {

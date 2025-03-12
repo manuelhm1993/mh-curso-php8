@@ -1,6 +1,8 @@
 <?php
 
-require_once './Clases/Persona.php';
+namespace POO;
+
+require_once './POO/Persona.php';
 
 //Conjunto de funciones extra que se implementan en una clase
 trait A 

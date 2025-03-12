@@ -1,5 +1,7 @@
 <?php
 
+namespace POO;
+
 //Plantilla que define la herencia
 interface iA
 {

@@ -1,5 +1,7 @@
 <?php
 
+namespace POO;
+
 //Clase que define la herencia y no se puede instanciar
 abstract class Abstracta 
 {

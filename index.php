@@ -1,7 +1,17 @@
 <?php
 
-require_once './Clases/Traits.php';
+use POO\Namespaces\Carpeta1\Humano;
+use POO\Namespaces\Carpeta2\Humano as Humano2; //Alias de namespace
 
-$persona = new Venezolano;
+require_once "./POO/Namespaces/Carpeta1/Humano.php";
+require_once "./POO/Namespaces/Carpeta2/Humano.php";
 
-$persona->saludar();
+$humano1 = new Humano;
+
+$humano1->saludar();
+
+echo '<br>';
+
+$humano2 = new Humano2;
+
+$humano2->saludar();
