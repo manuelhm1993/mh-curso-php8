@@ -1,9 +1,7 @@
 <?php
 
-require_once './Clases/Abstractas.php';
+require_once './Clases/Traits.php';
 
-$obj = new NuevaClase;
+$persona = new Venezolano;
 
-$obj->imprimir();
-echo "<br>";
-echo $obj->valorPrefijo('Buena suerte');
+$persona->saludoLatinoAmericano();
