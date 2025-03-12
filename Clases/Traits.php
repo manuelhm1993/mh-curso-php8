@@ -5,16 +5,34 @@ require_once './Clases/Persona.php';
 //Conjunto de funciones extra que se implementan en una clase
 trait A 
 {
-    protected function saludo(): void
+    public function decirHola(): void
     {
-        echo "Hola mundo desde el trait A";
+        echo "Hola ";
+    }
+}
+
+trait B
+{
+    public function decirMundo(): void
+    {
+        echo "mundo";
+    }
+
+    public abstract function saludar(): void;
+}
+
+trait C
+{
+    use A, B;
+
+    public function saludar(): void
+    {
+        $this->decirHola();
+        $this->decirMundo();
     }
 }
 
 class Venezolano extends Persona //Herencia
 {
-    //Cambiar la visibilidad de un método del trait
-    use A { 
-        saludo as public; 
-    }
+    use C;
 }
