@@ -12,8 +12,14 @@ interface iB extends iA
     public function prueba2();
 }
 
+//Herencia múltiple en interfaces
+interface iC extends iA, iB
+{
+    public function prueba3();
+}
+
 //Se deben implementar los métodos de ambas interfaces por la herencia
-class C implements iB
+class C implements iC
 {
     public function prueba()
     {
@@ -21,6 +27,11 @@ class C implements iB
     }
 
     public function prueba2()
+    {
+        
+    }
+
+    public function prueba3()
     {
         
     }
