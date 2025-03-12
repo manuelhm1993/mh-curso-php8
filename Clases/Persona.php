@@ -11,6 +11,11 @@ class Persona
     private int $edad;
 
     //Métodos
+    public function saludo(): void
+    {
+        echo "Hello world";
+    }
+
     public function get_nombre(): string
     {
         return $this->nombre;
