@@ -1,21 +1,27 @@
 <?php
 
 //Plantilla que define la herencia
-interface iTemplate
+interface iA
 {
-    public function setVariable(string $nombre): void;
-    public function getHtml();
+    public function prueba();
 }
 
-class Template implements iTemplate
+//Herencia de interfaces
+interface iB extends iA
 {
-    public function setVariable(string $nombre): void
-    {
+    public function prueba2();
+}
 
+//Se deben implementar los métodos de ambas interfaces por la herencia
+class C implements iB
+{
+    public function prueba()
+    {
+        
     }
 
-    public function getHtml()
+    public function prueba2()
     {
-
+        
     }
 }
