@@ -36,10 +36,7 @@ class DetenerHerencia
 
 class Departamento extends DetenerHerencia
 {
-    public function saludar(): void
-    {
-        echo "Bienvenido a mi departamento";
-    }
+    
 }
 
 $obj = new Departamento;
