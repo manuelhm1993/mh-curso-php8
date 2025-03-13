@@ -4,7 +4,7 @@ namespace POO;
 
 class UsoStatic
 {
-    private static string $nombre;
+    private static string $nombre = "Manuel Henriquez";
 
     //El método static le pertenece a la clase y no a una instancia
     public static function saludar(): void
@@ -28,9 +28,14 @@ class UsoStatic
     }
 }
 
-//Se usa directamente la clase para invocar al método
-UsoStatic::setNombre('Manuel Henriquez');
+class Humano extends UsoStatic
+{
+    public function saludoHumano(): void
+    {
+        echo "Hola mundo, " . parent::getNombre();
+    }
+}
 
-$obj = new UsoStatic;
+$obj = new Humano;
 
-$obj->saludoPersonalizado();
+$obj->saludoHumano();
