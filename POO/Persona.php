@@ -12,6 +12,15 @@ class Persona
     private string $apellido_materno;
     private string $cedula;
 
+    //Constructor
+    public function __construct(string $nombre, string $apellido_paterno, string $apellido_materno, string $cedula)
+    {
+        $this->nombre = $nombre;
+        $this->apellido_paterno = $apellido_paterno;
+        $this->apellido_materno = $apellido_materno;
+        $this->cedula = $cedula;
+    }
+
     //Métodos
     public function get_nombre(): string
     {
@@ -61,15 +70,6 @@ class Persona
     }
 }
 
-$persona = new Persona;
+$persona = new Persona("Manuel", "Henriquez", "Moreno", "22476796");
 
-/*
-$persona->set_nombre("Manuel");
-$persona->set_apellido("Henriquez", "Moreno");
-$persona->set_cedula("22476796");
 $persona->imprimirDatos();
-*/
-$persona->set_nombre("Manuel")
-        ->set_apellido("Henriquez", "Moreno")
-        ->set_cedula("22476796")
-        ->imprimirDatos();
