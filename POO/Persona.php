@@ -12,8 +12,7 @@ class Persona
             private string $apellido_paterno, 
             private string $apellido_materno, 
             private string $cedula
-        )
-    {}
+        ) {}
 
     //Métodos
     public function get_nombre(): string
@@ -64,6 +63,7 @@ class Persona
     }
 }
 
-$persona = new Persona("Manuel", "Henriquez", "Moreno", "22476796");
+//A partir de php 8 se puede especificar la propiedad del parámetro enviado
+$persona = new Persona(nombre:"Manuel", apellido_materno:"Moreno", apellido_paterno:"Henriquez", cedula:"22476796");
 
 $persona->imprimirDatos();
