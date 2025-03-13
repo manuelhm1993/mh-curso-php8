@@ -2,11 +2,16 @@
 
 namespace POO;
 
-//La palabra reservada final delante de una clase detiene la herencia
-final class DetenerHerencia
+class DetenerHerencia
 {
     private string $color;
     private string $seguridad;
+
+    //La palabra reservada final delante de un método impide que este se pueda sobreescribir
+    final public function saludar(): void
+    {
+        echo "Bienvenido a mi hogar";
+    }
 
     public function setColor(string $color): void
     {
@@ -28,3 +33,15 @@ final class DetenerHerencia
         return $this->seguridad;
     }
 }
+
+class Departamento extends DetenerHerencia
+{
+    public function saludar(): void
+    {
+        echo "Bienvenido a mi departamento";
+    }
+}
+
+$obj = new Departamento;
+
+echo $obj->saludar();
