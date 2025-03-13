@@ -2,15 +2,15 @@
 
 namespace POO;
 
-require_once './POO/Common.php';
+require_once "Common.php";
 
 class Persona 
 {
     //Propiedades
     private string $nombre;
-    private string $apellido1;
-    private string $apellido2;
-    private int $edad;
+    private string $apellido_paterno;
+    private string $apellido_materno;
+    private string $cedula;
 
     //Métodos
     public function get_nombre(): string
@@ -20,27 +20,56 @@ class Persona
 
     public function get_apellido(): string
     {
-        return "{$this->apellido1} {$this->apellido2}";
+        return "{$this->apellido_paterno} {$this->apellido_materno}";
     }
 
-    public function get_edad(): int
+    public function get_cedula(): string
     {
-        return $this->edad;
+        return $this->cedula;
     }
 
-    public function set_nombre(string $nombre): void
+    public function set_nombre(string $nombre): Persona
     {
         $this->nombre = Common::formatear_texto($nombre);
+        
+        return $this;
     }
 
-    public function set_apellido(string $apellido1, string $apellido2 = ''): void
+    public function set_apellido(string $apellido_paterno, string $apellido_materno = ''): Persona
     {
-        $this->apellido1 = Common::formatear_texto($apellido1);
-        $this->apellido2 = Common::formatear_texto($apellido2);
+        $this->apellido_paterno = Common::formatear_texto($apellido_paterno);
+        $this->apellido_materno = Common::formatear_texto($apellido_materno);
+        
+        return $this;
     }
 
-    public function set_edad(int $edad): void
+    public function set_cedula(string $cedula): Persona
     {
-        $this->edad = $edad;
+        $this->cedula = $cedula;
+        
+        return $this;
+    }
+
+    public function imprimirDatos(): void
+    {
+        echo "<ul>";
+            echo "<li>Nombre: {$this->nombre}</li>";
+            echo "<li>Apellido paterno: {$this->apellido_paterno}</li>";
+            echo "<li>Apellido materno: {$this->apellido_materno}</li>";
+            echo "<li>Cédula: {$this->cedula}</li>";
+        echo "</ul>";
     }
 }
+
+$persona = new Persona;
+
+/*
+$persona->set_nombre("Manuel");
+$persona->set_apellido("Henriquez", "Moreno");
+$persona->set_cedula("22476796");
+$persona->imprimirDatos();
+*/
+$persona->set_nombre("Manuel")
+        ->set_apellido("Henriquez", "Moreno")
+        ->set_cedula("22476796")
+        ->imprimirDatos();
