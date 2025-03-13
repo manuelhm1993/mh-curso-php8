@@ -6,20 +6,14 @@ require_once "Common.php";
 
 class Persona 
 {
-    //Propiedades
-    private string $nombre;
-    private string $apellido_paterno;
-    private string $apellido_materno;
-    private string $cedula;
-
-    //Constructor
-    public function __construct(string $nombre, string $apellido_paterno, string $apellido_materno, string $cedula)
-    {
-        $this->nombre = $nombre;
-        $this->apellido_paterno = $apellido_paterno;
-        $this->apellido_materno = $apellido_materno;
-        $this->cedula = $cedula;
-    }
+    //Constructor a partir de php 8 se pueden declarar propiedades dentro del constructor directamente
+    public function __construct(
+            private string $nombre, 
+            private string $apellido_paterno, 
+            private string $apellido_materno, 
+            private string $cedula
+        )
+    {}
 
     //Métodos
     public function get_nombre(): string
