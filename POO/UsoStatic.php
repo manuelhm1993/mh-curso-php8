@@ -21,9 +21,16 @@ class UsoStatic
     {
         self::$nombre = $nombre;
     }
+
+    public function saludoPersonalizado(): void
+    {
+        echo "Hola " . self::$nombre;
+    }
 }
 
 //Se usa directamente la clase para invocar al método
 UsoStatic::setNombre('Manuel Henriquez');
 
-echo UsoStatic::getNombre();
+$obj = new UsoStatic;
+
+$obj->saludoPersonalizado();
