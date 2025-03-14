@@ -1,4 +1,4 @@
-create table `ejemplo`.`contactos`(
+create table `cf_bd_ejemplo`.`contactos`(
 	`id` int not null auto_increment,
     `nombre` varchar(64) not null,
     `apellidos` varchar(64) not null,

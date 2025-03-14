@@ -1,0 +1,1 @@
+delete from cf_bd_ejemplo.contactos where contactos.id = 2;

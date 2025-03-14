@@ -1,1 +1,1 @@
-CREATE SCHEMA ejemplo
+CREATE SCHEMA cf_bd_ejemplo
