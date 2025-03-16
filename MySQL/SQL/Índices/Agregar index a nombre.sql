@@ -1,0 +1,1 @@
+alter table cf_bd_ejemplo.contactos add index(nombre);

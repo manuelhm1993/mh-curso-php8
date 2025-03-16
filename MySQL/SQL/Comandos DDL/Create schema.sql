@@ -1,0 +1,1 @@
+CREATE SCHEMA cf_bd_ejemplo
