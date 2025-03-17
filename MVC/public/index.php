@@ -1,17 +1,4 @@
 <?php
 
-use Lib\Route;
-
 require_once "../autoload.php";
-
-Route::get('/', function () {
-    echo 'Hola desde la página principal';
-});
-
-Route::get('contact', function () {
-    echo 'Hola desde la página contactos';
-});
-
-Route::get('about', function () {
-    echo 'Hola desde la página acerca de';
-});
+require_once "../routes/web.php";
