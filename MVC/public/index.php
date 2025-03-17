@@ -6,6 +6,6 @@
     <title>MVC</title>
 </head>
 <body>
-    <h1>Hola desde el register</h1>
+    <h1>Único punto de acceso a la app</h1>
 </body>
 </html>
