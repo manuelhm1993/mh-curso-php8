@@ -7,7 +7,7 @@ use AutoLoad\Models\Course;
 
 //Esta función se encarga de importar los archivos correspondientes
 spl_autoload_register(function ($clase) {
-    $clase = '../' . str_replace("\\", "/", $clase) . '.php';
+    $clase = str_replace("\\", "/", $clase) . '.php';
 
     if(file_exists($clase)) require_once $clase;
 });

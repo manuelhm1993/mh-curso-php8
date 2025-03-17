@@ -1,3 +1,3 @@
 <?php
 
-namespace MySQL\CRUD;
+require_once "./AutoLoad/index.php";
